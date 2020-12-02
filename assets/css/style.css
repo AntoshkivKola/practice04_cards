@@ -1,9 +1,9 @@
 :root{
   --card-min-width: 400px;
   --card-min-height: 266px;
-  --card-width: 30vw;
-  --card-height: 20vw;
-  --card-icon-size: 35px;
+  --card-max-width: 600px;
+  --card-max-height: 400px;
+  --card-icon-size: 1.8em;
 }
 
 *{
@@ -13,6 +13,11 @@
 .wrapper-card{
   position: relative;
   display: inline-block;
+  
+  min-width: 300px;
+  width: 100%;
+  max-width: 450px;
+  
   overflow: hidden;
   border-radius: 5px;
 
@@ -20,6 +25,7 @@
   z-index:10;
   color:white;
   margin: 10px;
+  
 }
 
 .card::before, .card::after{
@@ -36,14 +42,14 @@
 }
 
 .wrapper-card:nth-child(3n+1){
-  background: linear-gradient(90deg, rgba(224,168,61,1) 0%, rgba(241,31,78,1) 100%);
+  background: linear-gradient(90deg, rgba(224,168,61,0.8) 0%, rgba(241,31,78,0.8) 100%);
 }
 
 .wrapper-card:nth-child(3n+2){
-  background: linear-gradient(90deg, rgba(61,160,224,1) 12%, rgba(72,48,228,1) 100%);
+  background: linear-gradient(90deg, rgba(61,160,224,0.7) 12%, rgba(72,48,228,0.7) 100%);
 }
 .wrapper-card:nth-child(3n+3){
-  background: linear-gradient(90deg, rgba(61,224,145,1) 2%, rgba(55,228,48,1) 72%);
+  background: linear-gradient(90deg, rgba(61,224,145,0.8) 2%, rgba(55,228,48,0.8) 72%);
 }
 
 .card::before{
@@ -56,12 +62,8 @@
   left: 55%;
 }
 
-.card{
-  min-width: var(--card-min-width);
-  width: var(--card-width);
-  min-height: var(--card-min-height);
-  height: var(--card-height);
 
+.card{
   padding: 50px 40px;
 }
 
@@ -74,22 +76,27 @@
   font-size: 1.5em;
   text-transform: capitalize;
 }
+.relative{
+  position: relative;
+  
+}
 
 .card-icon{
+  position: absolute;
   width: var(--card-icon-size);
   height: var(--card-icon-size);
-  float: right;
+  right: 0;
 }
 
 .card-numbers{
-  margin-top: calc(var(--card-height)/10);
+  margin-top: 30px;
 
   font-size: 2.5em;
   font-style: bold;
 }
 .card-dop-info{
   
-  margin-top: calc(var(--card-height)/3);
+  margin-top: 50px;
 
   font-size: 1.2em;
   font-style: bold;
