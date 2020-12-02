@@ -1,6 +1,6 @@
 :root{
   --card-min-width: 600px;
-  --card-min-height: calc(var(--card-min-width:)/1);
+  --card-min-height: calc(var(--card-min-width:)/1.5);
   --card-width: 25vw;
   --card-icon-size: 35px;
 }
@@ -12,16 +12,16 @@
 .wrapper-card{
   position: relative;
   display: inline-block;
-  
+  overflow: hidden;
   border-radius: 5px;
 
   font-family: sans-serif;
-  
+  z-index:10;
   color:white;
   margin: 10px;
 }
 
-.wrapper-card::before, .wrapper-card::after{
+.card::before, .card::after{
   z-index: 2;
   content: '';
   position: absolute;
@@ -29,9 +29,9 @@
   width: calc(var(--card-min-width)/2);
   height: calc(var(--card-min-width)/2);
   border-radius: calc(var(--card-min-width)/4);
-  overflow: hidden;
+  
   opacity: 0.15;
-  z-index:10;
+  
 }
 
 .bg-weekly-sales{
@@ -45,12 +45,12 @@
   background: linear-gradient(90deg, rgba(61,224,145,1) 2%, rgba(55,228,48,1) 72%);
 }
 
-.wrapper-card::before{
+.card::before{
   bottom: 20%;
   left: 70%;
 }
 
-.wrapper-card::after{
+.card::after{
   top: 55%;
   left: 55%;
 }
