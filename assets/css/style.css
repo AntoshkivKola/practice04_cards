@@ -1,0 +1,36 @@
+:root{
+
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.wrapper-card{
+
+  display: inline-block;
+  background-color: blueviolet;
+  border-radius: 15px;
+
+  font-family: sans-serif;
+  
+  color:white;
+}
+.card{
+  width: 30vw;
+  height: 30vh;
+
+  padding: 50px 40px;
+}
+
+.card > span{
+  display: block;
+}
+
+.card-header{
+  display: inline-block;
+}
+
+.card-icon{
+ float: right;
+}
