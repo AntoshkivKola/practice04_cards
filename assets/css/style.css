@@ -1,7 +1,8 @@
 :root{
-  --card-min-width: 600px;
-  --card-min-height: calc(var(--card-min-width:)/1.5);
-  --card-width: 25vw;
+  --card-min-width: 400px;
+  --card-min-height: 266px;
+  --card-width: 30vw;
+  --card-height: 20vw;
   --card-icon-size: 35px;
 }
 
@@ -15,7 +16,7 @@
   overflow: hidden;
   border-radius: 5px;
 
-  font-family: sans-serif;
+  font-family:Roboto, sans-serif;
   z-index:10;
   color:white;
   margin: 10px;
@@ -26,9 +27,9 @@
   content: '';
   position: absolute;
   background-color: white;
-  width: calc(var(--card-min-width)/2);
-  height: calc(var(--card-min-width)/2);
-  border-radius: calc(var(--card-min-width)/4);
+  width: calc(var(--card-min-width)/1.2);
+  height: calc(var(--card-min-width)/1.2);
+  border-radius: calc(var(--card-min-width)/2.4);
   
   opacity: 0.15;
   
@@ -59,7 +60,8 @@
   min-width: var(--card-min-width);
   width: var(--card-width);
   min-height: var(--card-min-height);
-  
+  height: var(--card-height);
+
   padding: 50px 40px;
 }
 
@@ -80,15 +82,17 @@
 }
 
 .card-numbers{
-  margin-top: 30px;
+  margin-top: calc(var(--card-height)/10);
 
   font-size: 2.5em;
   font-style: bold;
 }
 .card-dop-info{
-  margin-top: 50px;
+  
+  margin-top: calc(var(--card-height)/3);
 
   font-size: 1.2em;
   font-style: bold;
+  
   
 }
