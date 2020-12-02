@@ -12,7 +12,7 @@
 .wrapper-card{
   position: relative;
   display: inline-block;
-  background-color: blueviolet;
+  
   border-radius: 5px;
 
   font-family: sans-serif;
@@ -22,6 +22,7 @@
 }
 
 .wrapper-card::before, .wrapper-card::after{
+  z-index: 2;
   content: '';
   position: absolute;
   background-color: white;
@@ -30,7 +31,20 @@
   border-radius: calc(var(--card-min-width)/4);
   overflow: hidden;
   opacity: 0.15;
+  z-index:10;
 }
+
+.bg-weekly-sales{
+  background: linear-gradient(90deg, rgba(224,168,61,1) 0%, rgba(241,31,78,1) 100%);
+}
+
+.bg-weekly-orders{
+  background: linear-gradient(90deg, rgba(61,160,224,1) 12%, rgba(72,48,228,1) 100%);
+}
+.bg-visitors-online{
+  background: linear-gradient(90deg, rgba(61,224,145,1) 2%, rgba(55,228,48,1) 72%);
+}
+
 .wrapper-card::before{
   bottom: 20%;
   left: 70%;
@@ -42,12 +56,10 @@
 }
 
 .card{
-  
   min-width: var(--card-min-width);
   width: var(--card-width);
   min-height: var(--card-min-height);
   
-
   padding: 50px 40px;
 }
 
@@ -58,6 +70,7 @@
 .card-header{
   display: inline-block;
   font-size: 1.5em;
+  text-transform: capitalize;
 }
 
 .card-icon{
@@ -77,4 +90,5 @@
 
   font-size: 1.2em;
   font-style: bold;
+  
 }
