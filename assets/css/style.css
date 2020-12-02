@@ -1,5 +1,8 @@
 :root{
-
+  --card-min-width: 600px;
+  --card-min-height: calc(var(--card-min-width:)/1);
+  --card-width: 25vw;
+  --card-icon-size: 35px;
 }
 
 *{
@@ -7,18 +10,43 @@
 }
 
 .wrapper-card{
-
+  position: relative;
   display: inline-block;
   background-color: blueviolet;
-  border-radius: 15px;
+  border-radius: 5px;
 
   font-family: sans-serif;
   
   color:white;
+  margin: 10px;
 }
+
+.wrapper-card::before, .wrapper-card::after{
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: calc(var(--card-min-width)/2);
+  height: calc(var(--card-min-width)/2);
+  border-radius: calc(var(--card-min-width)/4);
+  overflow: hidden;
+  opacity: 0.15;
+}
+.wrapper-card::before{
+  bottom: 20%;
+  left: 70%;
+}
+
+.wrapper-card::after{
+  top: 55%;
+  left: 55%;
+}
+
 .card{
-  width: 30vw;
-  height: 30vh;
+  
+  min-width: var(--card-min-width);
+  width: var(--card-width);
+  min-height: var(--card-min-height);
+  
 
   padding: 50px 40px;
 }
@@ -29,8 +57,24 @@
 
 .card-header{
   display: inline-block;
+  font-size: 1.5em;
 }
 
 .card-icon{
- float: right;
+  width: var(--card-icon-size);
+  height: var(--card-icon-size);
+  float: right;
+}
+
+.card-numbers{
+  margin-top: 30px;
+
+  font-size: 2.5em;
+  font-style: bold;
+}
+.card-dop-info{
+  margin-top: 50px;
+
+  font-size: 1.2em;
+  font-style: bold;
 }
